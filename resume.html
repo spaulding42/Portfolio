@@ -6,15 +6,46 @@
         <title>Portfolio</title>
         <link rel="stylesheet" href="style.css">
     </head>
+    <style>
+        body{
+            background-image: url('Assets/pexels-tirachard-kumtanom-733852.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <span>Resume</span>
-        <a href="about.html">About Me</a>
-        <a href="vanbuild.html">Van Build</a>
-        <a href="contact.html">Contact Me</a>
+        <a class="nav-btn btn-animate" href="index.html">Home</a>
+        <a class="nav-btn btn-animate" href="projects.html">Projects</a>
+        <span class="nav-btn nav-current">Resume</span>
+        <a class="nav-btn btn-animate" href="about.html">About Me</a>
+        <a class="nav-btn btn-animate" href="vanbuild.html">Van Build</a>
+        <a class="nav-btn btn-animate" href="contact.html">Contact Me</a>
     </nav>
     <body>
         <header><h1>Resume</h1></header>
+        <h3 class="center">Download my resume <a href="https://docs.google.com/document/d/1mrvLJ6efu4Haoc3DrCfBjB7Vp8U2z3Rmbw8jXlltc3A/edit?usp=sharing">here!</a></h3>
+        
+        <h1 class="center">Devin A Spaulding</h1>
+        
+        <p class="center bold">Fairview, Ut 84629 | spaulding42@gmail.com | Tel: 435-851-9665</p>
+        <div class="center"><a class="bold" href="https://www.linkedin.com/in/devin-spaulding-063a1a245/">LinkedIn</a> | <a class= "bold" href="https://github.com/spaulding42">GitHub</a></div>
+        
+        <h2 class="underlined center">Personal Statement</h2>
+        <p class="center">Highly motivated software developer with a passion for learning. Excellent people skills with both collaborating on a project or interacting with clients. Extremely hard worker that knows how to follow through on projects and commitments. Learned to stay calm under pressure through prior work experience.</p>
+
+        <h2 class="underlined center">Technical Skills</h2>
+        <p class="center"><span class="bold">Languages:</span> C#, Javascript, Python, HTML5, CSS | <span class="bold">Frameworks/Libraries:</span> Flask, Jinja2, React, Node.js, ASP.NET, Razor, MVC, Bootstrap, AJAX and APIs, Postman, Mongoose | <span class="bold">Databases:</span> MySQL, MongoDB | <span class="bold">Version Control Systems:</span> Git, GitHub</p>
+
+        <h2 class="underlined center">Technical Projects</h2>
+        <div class="projects-box">
+            <ul>
+                <li class="center"><span class="bold">Devio</span> | Game Developer | <a href="https://github.com/spaulding42/Python_Assignments/tree/master/Python/Devio">GitHub</a>
+                <p>Side scroller game, like "Mario". Programmed using <span class="bold">Python, MySQL, Pygame</span></p></li>
+                <li class="center"><span class="bold">Game Browsing Website</span> | Team API Manager | <a href="https://github.com/tlarram/Gaming-Website-Project">GitHub</a>
+                <p>Website for browsing and viewing details on popular video game titles. Programmed using <span class="bold">React</span> and <span class="bold">RAWG API</span></p></li>
+            </ul>
+
+        </div>
     </body>
 </html>

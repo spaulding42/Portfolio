@@ -1,8 +1,136 @@
-.nav {
+*{
+    font-family: 'Roboto Mono', monospace;
+    /* font-size: large; */
+}
+nav {
     display: flex;
-    
+    justify-content: center;
+    margin: 20px;
+    border-bottom: 5px solid black;
+}
+nav > a {
+    margin: 20px;
+
+}
+
+nav > span {
+    margin: 20px;
 }
 
 header > h1{
     text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+.underlined{
+    text-decoration: underline;
+}
+.main-pic{
+    width: 25%;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px;
+}
+.dojo-logo{
+    width: 20%;
+    height: auto;
+    margin: 20px;
+    transition: 200ms ease-in-out;
+}
+.dojo-logo:hover{
+    
+    border: 2px solid #222;
+    box-shadow: 3px 4px black;
+    border-radius: 15px;
+    padding: 5px;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.center{
+    text-align: center;
+}
+.text-box{
+    border: 3px solid black;
+    border-radius: 25px;
+    background-color: #222;
+    padding: 1%;
+    opacity: 0.5;
+    transition: 200ms ease-in-out;
+}
+.text-box:hover{
+    opacity: 0.9;
+    box-shadow: 5px 10px #111;
+    transition: 200ms ease-in-out;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    transition: 200ms ease-in-out;
+}
+.icon:hover{
+
+    transition: 200ms ease-in-out;
+    width: 50px;
+    height: 50px;
+}
+.icon-box{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.nav-btn{
+    background-color: var(--background-color);
+    color: #222;
+    padding: .5em 1em;
+    border: none;
+    outline: none;
+    position: relative;
+    
+    text-decoration: none;
+    
+    --background-color: lightblue;
+    --border-size: 2px;
+  
+  }
+  
+  
+  /* border slides out around box on hover*/
+  .nav-btn.btn-animate::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    cursor: pointer;
+    border: var(--border-size) solid var(--background-color);
+    transition: top,left,right,bottom 100ms ease-in-out;
+  }
+  
+  .nav-btn.btn-animate:hover::before,
+  .nav-btn.btn-animate:focus::before{
+    top: calc(var(--border-size)* -2);
+    left: calc(var(--border-size)* -2);
+    right: calc(var(--border-size)* -2);
+    bottom: calc(var(--border-size)* -2);
+  }
+
+.nav-current{
+    background-color: rgb(124, 214, 205);
+}
+
+/* resume page css */
+.projects-box{
+    margin-left: 25%;
+    width: 50%;
+    justify-content: center;
+    
 }
