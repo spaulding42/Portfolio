@@ -5,25 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+        <script src="index.js"></script>
     </head>
-    <style>
-        body{
-            background-image: url('Assets/pexels-tirachard-kumtanom-733852.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-    </style>
+    
     <nav>
-        <a class="nav-btn btn-animate" href="index.html">Home</a>
-        <a class="nav-btn btn-animate" href="projects.html">Projects</a>
+        <a class="nav-btn btn-animate btn-slide" href="index.html">Home</a>
+        <a class="nav-btn btn-animate btn-slide" href="projects.html">Projects</a>
         <span class="nav-btn nav-current">Resume</span>
-        <a class="nav-btn btn-animate" href="about.html">About Me</a>
-        <a class="nav-btn btn-animate" href="vanbuild.html">Van Build</a>
-        <a class="nav-btn btn-animate" href="contact.html">Contact Me</a>
+        <a class="nav-btn btn-animate btn-slide" href="about.html">About Me</a>
+        <a class="nav-btn btn-animate btn-slide" href="vanbuild.html">Van Build</a>
+        <a class="nav-btn btn-animate btn-slide" href="contact.html">Contact Me</a>
     </nav>
-    <body>
+    <body class="fade background">
         <header><h1>Resume</h1></header>
         <h3 class="center">Download my resume <a href="https://docs.google.com/document/d/1mrvLJ6efu4Haoc3DrCfBjB7Vp8U2z3Rmbw8jXlltc3A/edit?usp=sharing">here!</a></h3>
         
@@ -85,11 +79,6 @@
                 <li>Over the years i have trained (and in some cases also hired) new technicians numbering well over a hundred</li>
             </ul>
         </div>
-        <script type="text/javascript">
-            window.addEventListener("scroll", function(){
-                var nav = document.querySelector("nav");
-                nav.classList.toggle("nav-fill", window.scrollY > 0);
-            })
-        </script>
+
     </body>
 </html>

@@ -2,6 +2,9 @@
     font-family: 'Roboto Mono', monospace;
     /* font-size: large; */
 }
+:root {
+    --gradient: linear-gradient(45deg, white, lightblue, rgb(4, 176, 233));
+}
 nav {
     position: fixed;
     top: 0;
@@ -9,7 +12,7 @@ nav {
     display: flex;
     justify-content: center;
     width: 100%;
-    border-bottom: 5px solid black;
+    border-bottom: 2px solid black;
 }
 nav > a {
     margin: 20px;
@@ -93,15 +96,18 @@ header > h1{
     align-items: center;
 }
 .nav-btn{
-    background-color: var(--background-color);
+    background-image: var(--gradient);
     color: #222;
     padding: .5em 1em;
     border: none;
     outline: none;
     position: relative;
     text-decoration: none;
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 1.25s;
     
-    --background-color: lightblue;
+    --background-color: rgb(157, 210, 228);
     --border-size: 2px;
   
   }
@@ -130,11 +136,12 @@ header > h1{
   }
 
 .nav-current{
-    background-color: rgb(124, 214, 205);
+    /* background-color: rgb(124, 214, 205); */
+    background-image: linear-gradient(to left bottom, white , rgb(157, 210, 228));
 }
 
 .nav-fill {
-    background-color: white;
+    background-image: linear-gradient(to left bottom, black, white);
     opacity: 0.9;
 }
 /* resume page css */
@@ -178,4 +185,39 @@ header > h1{
 
 .bb-toggle:hover .bb-info{
     visibility: visible;
+}
+
+.fade {
+    background-image: linear-gradient(to right top, rgb(157, 210, 228), gray);
+}
+
+.background{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.notebook-plant{
+    background-image: url('Assets/pexels-tirachard-kumtanom-733852.jpg');
+}
+
+.btn-slide:hover,
+.btn-slide:focus{
+    background-position: right;
+}
+
+/* Van build section */
+.van-pic-small{
+    height: 250px;
+    width: auto;
+    border-radius: 15px;
+    align-items: center;
+    box-shadow: 1px 1px rgb(71, 47, 15);
+    border: 3px solid black;
+    transition: 200ms ease-in;
+}
+
+.van-pic-small:hover{
+    height: 260px;
+    box-shadow: 7px 7px rgb(71, 47, 15);
 }
