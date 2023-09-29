@@ -47,10 +47,14 @@ header > h1{
     margin: 20px;
 }
 .dojo-logo{
-    width: 20%;
+    width: 100%;
     height: auto;
     margin: 20px;
     transition: 100ms ease-in-out;
+}
+.dojo-logo-box{
+    width: 21%;
+    padding: left 10px;
 }
 .dojo-logo:hover{
     
@@ -89,10 +93,7 @@ header > h1{
     
 }
 .icon:hover{
-
-    transition: 200ms ease-in-out;
-    width: 55px;
-    height: 55px;
+    transform: scale(1.3);
 }
 .icon-box{
     height: 60px;
@@ -222,17 +223,19 @@ header > h1{
     box-shadow: 1px 1px rgb(71, 47, 15);
     border: 3px solid black;
     transition: 100ms ease-in;
+
     position: relative;
+}
+
+.van-pic-small:hover{
+    box-shadow: 7px 7px rgb(71, 47, 15);
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .gallery{
     border: 5px solid black;
     border-radius: 25px;
-}
-.van-pic-small:hover{
-    width: 20.4vw;
-    box-shadow: 7px 7px rgb(71, 47, 15);
-    cursor: pointer;
 }
 
 #enlarged-pic{
