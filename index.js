@@ -1,11 +1,11 @@
 window.addEventListener("scroll", function(){
-    var nav = document.querySelector("nav");
+    let nav = document.querySelector("nav");
     nav.classList.toggle("nav-fill", window.scrollY > 0);
 })
 
 function shrink(e){
-    var enlargedPic = document.getElementById("enlarged-pic")
-    var bg = document.getElementById("black-overlay")
+    let enlargedPic = document.getElementById("enlarged-pic")
+    let bg = document.getElementById("black-overlay")
     bg.hidden = true
     enlargedPic.src = ""
     enlargedPic.hidden = true
@@ -13,14 +13,14 @@ function shrink(e){
 function enlarge(e)
 {
     console.log(e.src)
-    var enlargedPic = document.getElementById("enlarged-pic")
-    var bg = document.getElementById("black-overlay")
+    let enlargedPic = document.getElementById("enlarged-pic")
+    let bg = document.getElementById("black-overlay")
     bg.hidden = false
     enlargedPic.src = e.src
     enlargedPic.hidden = false
 
     // make the alt text show up on enlarged image as a description
-    var picText = document.getElementById("enlarged-alt")
+    let picText = document.getElementById("enlarged-alt")
     picText.innerHTML = e.alt
 }
 
@@ -35,4 +35,33 @@ function selfieOut(e)
 {
     console.log("OUT")
     e.src = "Assets/Tahoe_Selfie-BnW.jpg";
+}
+
+
+// Projects page
+
+// scroller
+let scrollers = document.querySelectorAll(".scroller");
+
+//only needed if someone has reduced motion turned on
+if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+{
+    addAnimation();
+}
+
+function addAnimation(){
+    scrollers.forEach(scroller => {
+        scroller.setAttribute("data-animated", true);
+
+        const innerScroller = scroller.querySelector(".inner-scroller");
+        const scrollerContent = Array.from(innerScroller.children);
+
+        scrollerContent.forEach(item => {
+            let duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            innerScroller.appendChild(duplicatedItem);
+            
+        })
+
+    })
 }

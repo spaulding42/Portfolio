@@ -6,6 +6,27 @@
     --gradient: linear-gradient(45deg, white, lightblue, rgb(4, 176, 233));
     --graygradient: linear-gradient(45deg, white, rgb(182, 182, 182),rgb(80, 80, 80), black);
 }
+
+.background{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.raindrops{
+    background-image: url('Assets/pexels-gabriel-peter-696644.jpg');
+}
+.notebook-plant{
+    background-image: url('Assets/pexels-tirachard-kumtanom-733852.jpg');
+}
+
+.construction{
+    background-image: url('Assets/Security_App_Demo/construction_bg.jpg');
+}
+.center-60{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 30px;
+}
 .white-text{
     color: white;
 }
@@ -197,17 +218,6 @@ header > h1{
     background-image: linear-gradient(to right top, rgb(157, 210, 228), gray);
 }
 
-.background{
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-.raindrops{
-    background-image: url('Assets/pexels-gabriel-peter-696644.jpg');
-}
-.notebook-plant{
-    background-image: url('Assets/pexels-tirachard-kumtanom-733852.jpg');
-}
 
 .btn-slide:hover,
 .btn-slide:focus{
@@ -283,7 +293,13 @@ header > h1{
 
 
 /* About page */
-
+.selfie-box{
+    content: '';
+    width: 23vw;
+    height: auto;
+    /* border: 3px solid black; */
+    float: left;
+}
 .about-selfie{
     border-radius: 100%;
     height: auto;
@@ -293,7 +309,7 @@ header > h1{
 }
 
 .about-selfie:hover{
-    width: 25vw;
+    transform: scale(1.05);
     border-radius: 1%;
 }
 
@@ -321,3 +337,62 @@ header > h1{
 .about-content{
     margin: 100px 10px;
 }
+
+
+/* PROJECTS PAGE */
+
+.img-video{
+    width: 25vw;
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+
+/* scroller CSS */
+.img-scroller{
+    width: 15vw;
+    height: auto;
+    cursor: pointer;
+}
+
+.scroller{
+    max-width: 70%;
+    border: 3px solid blue;
+    margin: auto;
+}
+
+.inner-scroller{
+    display: flex;
+    gap: 1rem;
+    padding-block: .5rem;
+    flex-wrap: wrap;
+}
+
+.scroller[data-animated="true"]{
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
+    mask: linear-gradient(90deg, transparent,  white 15%, white 85%, transparent);
+}
+
+.scroller[data-animated="true"] .inner-scroller{
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 40s var(--scroll-direction, forwards) linear infinite;
+    
+}
+
+.scroller[data-direction ="right"]{
+    --scroll-direction: reverse;
+}
+
+.scroller[data-direction = "left"]{
+    --scroll-direction: forwards;
+}
+
+@keyframes scroll{
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+/* END Scroller CSS */
