@@ -12,9 +12,11 @@
     background-attachment: fixed;
     background-size: cover;
 }
+
 .raindrops{
     background-image: url('Assets/pexels-gabriel-peter-696644.jpg');
 }
+
 .notebook-plant{
     background-image: url('Assets/pexels-tirachard-kumtanom-733852.jpg');
 }
@@ -22,14 +24,34 @@
 .construction{
     background-image: url('Assets/Security_App_Demo/construction_bg.jpg');
 }
+
 .center-60{
     width: 60%;
     margin: auto;
     margin-bottom: 30px;
 }
+
+.landing-pic{
+    width: 100%;
+    height: auto;
+}
+.margin-top{
+    margin-top: 50px;
+}
+
+.margin-lr{
+    margin-left: 15px;
+    padding-right: 15px;
+}
+
 .white-text{
     color: white;
 }
+
+.home-nav{
+    visibility: hidden;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -39,6 +61,59 @@ nav {
     width: 100%;
     border-bottom: 2px solid black;
 }
+
+.nav-btn{
+    background-image: var(--gradient);
+    color: #222;
+    padding: .5em 1em;
+    border: none;
+    outline: none;
+    position: relative;
+    text-decoration: none;
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 1.25s;
+    
+    --background-color: rgb(157, 210, 228);
+    --border-size: 2px;
+  
+  }
+  
+  
+  /* border slides out around box on hover*/
+  .nav-btn.btn-animate::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    cursor: pointer;
+    border: var(--border-size) solid var(--background-color);
+    transition: top,left,right,bottom 100ms ease-in-out;
+  }
+  
+  .nav-btn.btn-animate:hover::before,
+  .nav-btn.btn-animate:focus::before{
+    top: calc(var(--border-size)* -2);
+    left: calc(var(--border-size)* -2);
+    right: calc(var(--border-size)* -2);
+    bottom: calc(var(--border-size)* -2);
+  }
+
+.nav-current{
+    
+    background-image: linear-gradient(to left bottom, white , rgb(157, 210, 228));
+}
+
+.nav-fill {
+    background-image: linear-gradient(to left bottom, black, white);
+    opacity: 0.9;
+    z-index: 10;
+    visibility: visible;
+}
+
 nav > a {
     margin: 20px;
 
@@ -121,56 +196,7 @@ header > h1{
     display: flex;
     align-items: center;
 }
-.nav-btn{
-    background-image: var(--gradient);
-    color: #222;
-    padding: .5em 1em;
-    border: none;
-    outline: none;
-    position: relative;
-    text-decoration: none;
-    background-size: 200%;
-    background-position: left;
-    transition: background-position 1.25s;
-    
-    --background-color: rgb(157, 210, 228);
-    --border-size: 2px;
-  
-  }
-  
-  
-  /* border slides out around box on hover*/
-  .nav-btn.btn-animate::before{
-    content: '';
-    position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    cursor: pointer;
-    border: var(--border-size) solid var(--background-color);
-    transition: top,left,right,bottom 100ms ease-in-out;
-  }
-  
-  .nav-btn.btn-animate:hover::before,
-  .nav-btn.btn-animate:focus::before{
-    top: calc(var(--border-size)* -2);
-    left: calc(var(--border-size)* -2);
-    right: calc(var(--border-size)* -2);
-    bottom: calc(var(--border-size)* -2);
-  }
 
-.nav-current{
-    
-    background-image: linear-gradient(to left bottom, white , rgb(157, 210, 228));
-}
-
-.nav-fill {
-    background-image: linear-gradient(to left bottom, black, white);
-    opacity: 0.9;
-    z-index: 10;
-}
 /* resume page css */
 .projects-box{
     margin-left: 20%;
